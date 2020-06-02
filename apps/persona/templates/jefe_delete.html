@@ -1,0 +1,15 @@
+{%extends 'base/base.html'%}
+
+{%block content%}
+
+<form method="post">
+    {%csrf_token%}
+    <center>
+        <h1>¿Desea eliminar al jefe {{object.persona}} con cédula {{object.persona.cedula}}?</h1>
+        <button class="btn btn-primary" type="submit">Sí, eliminar</button>
+        <a class="btn btn-danger" href="{%url 'persona:listar_jefe'%}">Cancelar</a>
+    </center>
+    
+</form>
+
+{%endblock%}

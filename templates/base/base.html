@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Movie App </title>
+  {%block css%}
+  <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+  <link rel="stylesheet" href="{%static 'css/base.css'%}">
+  {%endblock%}
+
+  {%block extra_css%}
+  {%endblock%}
+
+</head>
+
+<body>
+  {%block navbar%}
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <a class="navbar-brand" href="#">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse bg-dark" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Empleados
+            </a>
+            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item bg-dark" href="{%url 'persona:registrar_empleado'%}">Registrar</a>
+              <a class="dropdown-item bg-dark" href="{%url 'persona:listar_empleado'%}">Listar</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Jefes
+            </a>
+            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item bg-dark" href="{%url 'persona:registrar_jefe'%}">Registrar</a>
+              <a class="dropdown-item bg-dark" href="{%url 'persona:listar_jefe'%}">Listar</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Personas
+            </a>
+            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item bg-dark" href="{%url 'persona:registrar_persona'%}">Registrar</a>
+              <a class="dropdown-item bg-dark" href="{%url 'persona:listar_persona'%}">Listar</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Teatro
+            </a>
+            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item bg-dark" href="{%url 'teatro:registrar_teatro'%}">Registrar</a>
+              <a class="dropdown-item bg-dark" href="{%url 'teatro:listar_teatro'%}">Listar</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Sala
+            </a>
+            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item bg-dark" href="{%url 'sala:registrar_sala'%}">Registrar</a>
+              <a class="dropdown-item bg-dark" href="{%url 'sala:listar_sala'%}">Listar</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Películas
+            </a>
+            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item bg-dark" href="{%url 'pelicula:registrar_pelicula'%}">Registrar</a>
+              <a class="dropdown-item bg-dark" href="{%url 'pelicula:listar_pelicula'%}">Listar</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Funciones
+            </a>
+            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item bg-dark" href="{%url 'funcion:registrar_funcion'%}">Registrar</a>
+              <a class="dropdown-item bg-dark" href="{%url 'funcion:listar_funcion'%}">Listar</a>
+
+          </li>
+        </ul>
+        {%if user.is_authenticated%}
+        <ul class="nav navbar-nav navbar-right ">
+          <li class="nav-item dropdown">
+           <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-expanded="false">{{user.first_name}}<span class="caret"></span></a>
+
+            
+              <div class="dropdown-menu bg-dark">
+                <a href="#" class="dropdown-item bg-dark">Perfil</a>
+                <a href="{%url 'password_change'%}" class="dropdown-item bg-dark">
+                  Cambiar Contraseña</a>
+                <a href="{%url 'logout'%}" class="dropdown-item bg-dark">Cerrar Sesión</a>
+              </div>
+           
+         </li>
+        </ul>
+        {%else%}
+        <ul class="nav navbar-nav navbar-right ">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" 
+            role="button" aria-expanded="false">Opciones<span class="caret"></span></a>
+            <ul class="dropdown-menu bg-dark" role="menu">
+              <li><a href="#" class="nav-link">Opciones</a></li>
+            </ul>
+          </li>
+        </ul>
+        {%endif%}
+      </div>
+    </nav>
+
+  </div>
+
+  
+  {%endblock%}
+
+  {%block content%}
+  {%endblock%}
+  
+
+</body>
+{%block js%}
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="{%static 'js/bootstrap.min.js'%}"></script>
+{%endblock%}
+{%block extra_js%}
+{%endblock%}
+  
+
+
+</html>

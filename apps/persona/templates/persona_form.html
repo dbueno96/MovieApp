@@ -1,0 +1,15 @@
+{%extends 'base/base.html'%}
+{{ form.media }}            
+{%block content%}
+<div class="container">
+    <form method="post">
+        {%csrf_token%}
+        {{form.as_p}}
+        <a class="btn bg-dark "href="{%url 'persona:listar_persona'%}">Atrás</a>
+        <button class="btn btn-primary" type="submit">Guardar</button>
+        
+    </form>
+    
+</div>
+
+{%endblock%}

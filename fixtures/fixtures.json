@@ -1,0 +1,1544 @@
+[
+{
+   "model": "contenttypes.contenttype",
+   "pk": 1,
+   "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 2,
+   "fields": {
+      "app_label": "auth",
+      "model": "permission"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 3,
+   "fields": {
+      "app_label": "auth",
+      "model": "group"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 4,
+   "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 5,
+   "fields": {
+      "app_label": "sessions",
+      "model": "session"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 6,
+   "fields": {
+      "app_label": "pelicula",
+      "model": "pelicula"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 7,
+   "fields": {
+      "app_label": "funcion",
+      "model": "funcion"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 8,
+   "fields": {
+      "app_label": "persona",
+      "model": "persona"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 9,
+   "fields": {
+      "app_label": "persona",
+      "model": "jefe"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 10,
+   "fields": {
+      "app_label": "persona",
+      "model": "empleado"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 11,
+   "fields": {
+      "app_label": "persona",
+      "model": "cliente"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 12,
+   "fields": {
+      "app_label": "teatro",
+      "model": "teatro"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 13,
+   "fields": {
+      "app_label": "sala",
+      "model": "sala"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 14,
+   "fields": {
+      "app_label": "sala",
+      "model": "silla"
+   }
+},
+{
+   "model": "contenttypes.contenttype",
+   "pk": 15,
+   "fields": {
+      "app_label": "boleta",
+      "model": "boleta"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "r0sza8fyubyp82np40c5do8et3d46gca",
+   "fields": {
+      "session_data": "ZGI2YWE3OTg1YjBiMTRkMzkzOTAzYzdiMTMyMGQ5NDZkY2Q0MDdlYzp7Il9hdXRoX3VzZXJfaWQiOiI3IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI0MWJiNTgwYzQyNTlmODZlMWI4MGZlNjZmODc3ODA0M2EzOWNhMTRjIn0=",
+      "expire_date": "2020-06-13T06:28:53.850Z"
+   }
+},
+{
+   "model": "teatro.teatro",
+   "pk": 1,
+   "fields": {
+      "nombre": "Unicali",
+      "ubicacion": "Unicentro C.C.",
+      "ciudad": "Cali"
+   }
+},
+{
+   "model": "sala.sala",
+   "pk": 1,
+   "fields": {
+      "numero": 1,
+      "cap_general": 40,
+      "cap_primera_clase": 15,
+      "cap_discapacitados": 10,
+      "tipo_formato": "2d",
+      "teatro": 1
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 1,
+   "fields": {
+      "sala": 1,
+      "pos_x": 0,
+      "pos_y": 0,
+      "tipo": "DISCAPACITADOS",
+      "nombre": "A-1"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 2,
+   "fields": {
+      "sala": 1,
+      "pos_x": 1,
+      "pos_y": 0,
+      "tipo": "DISCAPACITADOS",
+      "nombre": "A-2"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 3,
+   "fields": {
+      "sala": 1,
+      "pos_x": 2,
+      "pos_y": 0,
+      "tipo": "DISCAPACITADOS",
+      "nombre": "A-3"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 4,
+   "fields": {
+      "sala": 1,
+      "pos_x": 3,
+      "pos_y": 0,
+      "tipo": "DISCAPACITADOS",
+      "nombre": "A-4"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 5,
+   "fields": {
+      "sala": 1,
+      "pos_x": 4,
+      "pos_y": 0,
+      "tipo": "DISCAPACITADOS",
+      "nombre": "A-5"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 6,
+   "fields": {
+      "sala": 1,
+      "pos_x": 5,
+      "pos_y": 0,
+      "tipo": "DISCAPACITADOS",
+      "nombre": "A-6"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 7,
+   "fields": {
+      "sala": 1,
+      "pos_x": 6,
+      "pos_y": 0,
+      "tipo": "DISCAPACITADOS",
+      "nombre": "A-7"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 8,
+   "fields": {
+      "sala": 1,
+      "pos_x": 7,
+      "pos_y": 0,
+      "tipo": "DISCAPACITADOS",
+      "nombre": "A-8"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 9,
+   "fields": {
+      "sala": 1,
+      "pos_x": 8,
+      "pos_y": 0,
+      "tipo": "DISCAPACITADOS",
+      "nombre": "A-9"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 10,
+   "fields": {
+      "sala": 1,
+      "pos_x": 9,
+      "pos_y": 0,
+      "tipo": "DISCAPACITADOS",
+      "nombre": "A-10"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 11,
+   "fields": {
+      "sala": 1,
+      "pos_x": 0,
+      "pos_y": 0,
+      "tipo": "GENERAL",
+      "nombre": "B-1"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 12,
+   "fields": {
+      "sala": 1,
+      "pos_x": 1,
+      "pos_y": 0,
+      "tipo": "GENERAL",
+      "nombre": "B-2"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 13,
+   "fields": {
+      "sala": 1,
+      "pos_x": 2,
+      "pos_y": 0,
+      "tipo": "GENERAL",
+      "nombre": "B-3"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 14,
+   "fields": {
+      "sala": 1,
+      "pos_x": 3,
+      "pos_y": 0,
+      "tipo": "GENERAL",
+      "nombre": "B-4"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 15,
+   "fields": {
+      "sala": 1,
+      "pos_x": 4,
+      "pos_y": 0,
+      "tipo": "GENERAL",
+      "nombre": "B-5"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 16,
+   "fields": {
+      "sala": 1,
+      "pos_x": 0,
+      "pos_y": 1,
+      "tipo": "GENERAL",
+      "nombre": "C-1"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 17,
+   "fields": {
+      "sala": 1,
+      "pos_x": 1,
+      "pos_y": 1,
+      "tipo": "GENERAL",
+      "nombre": "C-2"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 18,
+   "fields": {
+      "sala": 1,
+      "pos_x": 2,
+      "pos_y": 1,
+      "tipo": "GENERAL",
+      "nombre": "C-3"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 19,
+   "fields": {
+      "sala": 1,
+      "pos_x": 3,
+      "pos_y": 1,
+      "tipo": "GENERAL",
+      "nombre": "C-4"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 20,
+   "fields": {
+      "sala": 1,
+      "pos_x": 4,
+      "pos_y": 1,
+      "tipo": "GENERAL",
+      "nombre": "C-5"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 21,
+   "fields": {
+      "sala": 1,
+      "pos_x": 0,
+      "pos_y": 2,
+      "tipo": "GENERAL",
+      "nombre": "D-1"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 22,
+   "fields": {
+      "sala": 1,
+      "pos_x": 1,
+      "pos_y": 2,
+      "tipo": "GENERAL",
+      "nombre": "D-2"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 23,
+   "fields": {
+      "sala": 1,
+      "pos_x": 2,
+      "pos_y": 2,
+      "tipo": "GENERAL",
+      "nombre": "D-3"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 24,
+   "fields": {
+      "sala": 1,
+      "pos_x": 3,
+      "pos_y": 2,
+      "tipo": "GENERAL",
+      "nombre": "D-4"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 25,
+   "fields": {
+      "sala": 1,
+      "pos_x": 4,
+      "pos_y": 2,
+      "tipo": "GENERAL",
+      "nombre": "D-5"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 26,
+   "fields": {
+      "sala": 1,
+      "pos_x": 0,
+      "pos_y": 3,
+      "tipo": "GENERAL",
+      "nombre": "E-1"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 27,
+   "fields": {
+      "sala": 1,
+      "pos_x": 1,
+      "pos_y": 3,
+      "tipo": "GENERAL",
+      "nombre": "E-2"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 28,
+   "fields": {
+      "sala": 1,
+      "pos_x": 2,
+      "pos_y": 3,
+      "tipo": "GENERAL",
+      "nombre": "E-3"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 29,
+   "fields": {
+      "sala": 1,
+      "pos_x": 3,
+      "pos_y": 3,
+      "tipo": "GENERAL",
+      "nombre": "E-4"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 30,
+   "fields": {
+      "sala": 1,
+      "pos_x": 4,
+      "pos_y": 3,
+      "tipo": "GENERAL",
+      "nombre": "E-5"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 31,
+   "fields": {
+      "sala": 1,
+      "pos_x": 0,
+      "pos_y": 4,
+      "tipo": "GENERAL",
+      "nombre": "F-1"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 32,
+   "fields": {
+      "sala": 1,
+      "pos_x": 1,
+      "pos_y": 4,
+      "tipo": "GENERAL",
+      "nombre": "F-2"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 33,
+   "fields": {
+      "sala": 1,
+      "pos_x": 2,
+      "pos_y": 4,
+      "tipo": "GENERAL",
+      "nombre": "F-3"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 34,
+   "fields": {
+      "sala": 1,
+      "pos_x": 3,
+      "pos_y": 4,
+      "tipo": "GENERAL",
+      "nombre": "F-4"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 35,
+   "fields": {
+      "sala": 1,
+      "pos_x": 4,
+      "pos_y": 4,
+      "tipo": "GENERAL",
+      "nombre": "F-5"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 36,
+   "fields": {
+      "sala": 1,
+      "pos_x": 0,
+      "pos_y": 5,
+      "tipo": "GENERAL",
+      "nombre": "G-1"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 37,
+   "fields": {
+      "sala": 1,
+      "pos_x": 1,
+      "pos_y": 5,
+      "tipo": "GENERAL",
+      "nombre": "G-2"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 38,
+   "fields": {
+      "sala": 1,
+      "pos_x": 2,
+      "pos_y": 5,
+      "tipo": "GENERAL",
+      "nombre": "G-3"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 39,
+   "fields": {
+      "sala": 1,
+      "pos_x": 3,
+      "pos_y": 5,
+      "tipo": "GENERAL",
+      "nombre": "G-4"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 40,
+   "fields": {
+      "sala": 1,
+      "pos_x": 4,
+      "pos_y": 5,
+      "tipo": "GENERAL",
+      "nombre": "G-5"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 41,
+   "fields": {
+      "sala": 1,
+      "pos_x": 0,
+      "pos_y": 6,
+      "tipo": "GENERAL",
+      "nombre": "H-1"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 42,
+   "fields": {
+      "sala": 1,
+      "pos_x": 1,
+      "pos_y": 6,
+      "tipo": "GENERAL",
+      "nombre": "H-2"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 43,
+   "fields": {
+      "sala": 1,
+      "pos_x": 2,
+      "pos_y": 6,
+      "tipo": "GENERAL",
+      "nombre": "H-3"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 44,
+   "fields": {
+      "sala": 1,
+      "pos_x": 3,
+      "pos_y": 6,
+      "tipo": "GENERAL",
+      "nombre": "H-4"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 45,
+   "fields": {
+      "sala": 1,
+      "pos_x": 4,
+      "pos_y": 6,
+      "tipo": "GENERAL",
+      "nombre": "H-5"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 46,
+   "fields": {
+      "sala": 1,
+      "pos_x": 0,
+      "pos_y": 7,
+      "tipo": "GENERAL",
+      "nombre": "I-1"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 47,
+   "fields": {
+      "sala": 1,
+      "pos_x": 1,
+      "pos_y": 7,
+      "tipo": "GENERAL",
+      "nombre": "I-2"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 48,
+   "fields": {
+      "sala": 1,
+      "pos_x": 2,
+      "pos_y": 7,
+      "tipo": "GENERAL",
+      "nombre": "I-3"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 49,
+   "fields": {
+      "sala": 1,
+      "pos_x": 3,
+      "pos_y": 7,
+      "tipo": "GENERAL",
+      "nombre": "I-4"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 50,
+   "fields": {
+      "sala": 1,
+      "pos_x": 4,
+      "pos_y": 7,
+      "tipo": "GENERAL",
+      "nombre": "I-5"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 51,
+   "fields": {
+      "sala": 1,
+      "pos_x": 0,
+      "pos_y": 0,
+      "tipo": "PRIMERA CLASE",
+      "nombre": "J-1"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 52,
+   "fields": {
+      "sala": 1,
+      "pos_x": 1,
+      "pos_y": 0,
+      "tipo": "PRIMERA CLASE",
+      "nombre": "J-2"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 53,
+   "fields": {
+      "sala": 1,
+      "pos_x": 2,
+      "pos_y": 0,
+      "tipo": "PRIMERA CLASE",
+      "nombre": "J-3"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 54,
+   "fields": {
+      "sala": 1,
+      "pos_x": 3,
+      "pos_y": 0,
+      "tipo": "PRIMERA CLASE",
+      "nombre": "J-4"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 55,
+   "fields": {
+      "sala": 1,
+      "pos_x": 4,
+      "pos_y": 0,
+      "tipo": "PRIMERA CLASE",
+      "nombre": "J-5"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 56,
+   "fields": {
+      "sala": 1,
+      "pos_x": 5,
+      "pos_y": 0,
+      "tipo": "PRIMERA CLASE",
+      "nombre": "J-6"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 57,
+   "fields": {
+      "sala": 1,
+      "pos_x": 6,
+      "pos_y": 0,
+      "tipo": "PRIMERA CLASE",
+      "nombre": "J-7"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 58,
+   "fields": {
+      "sala": 1,
+      "pos_x": 7,
+      "pos_y": 0,
+      "tipo": "PRIMERA CLASE",
+      "nombre": "J-8"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 59,
+   "fields": {
+      "sala": 1,
+      "pos_x": 0,
+      "pos_y": 1,
+      "tipo": "PRIMERA CLASE",
+      "nombre": "K-1"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 60,
+   "fields": {
+      "sala": 1,
+      "pos_x": 1,
+      "pos_y": 1,
+      "tipo": "PRIMERA CLASE",
+      "nombre": "K-2"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 61,
+   "fields": {
+      "sala": 1,
+      "pos_x": 2,
+      "pos_y": 1,
+      "tipo": "PRIMERA CLASE",
+      "nombre": "K-3"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 62,
+   "fields": {
+      "sala": 1,
+      "pos_x": 3,
+      "pos_y": 1,
+      "tipo": "PRIMERA CLASE",
+      "nombre": "K-4"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 63,
+   "fields": {
+      "sala": 1,
+      "pos_x": 4,
+      "pos_y": 1,
+      "tipo": "PRIMERA CLASE",
+      "nombre": "K-5"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 64,
+   "fields": {
+      "sala": 1,
+      "pos_x": 5,
+      "pos_y": 1,
+      "tipo": "PRIMERA CLASE",
+      "nombre": "K-6"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 65,
+   "fields": {
+      "sala": 1,
+      "pos_x": 6,
+      "pos_y": 1,
+      "tipo": "PRIMERA CLASE",
+      "nombre": "K-7"
+   }
+},
+{
+   "model": "sala.silla",
+   "pk": 66,
+   "fields": {
+      "sala": 1,
+      "pos_x": 7,
+      "pos_y": 1,
+      "tipo": "PRIMERA CLASE",
+      "nombre": "K-8"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 1,
+   "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 2,
+   "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 3,
+   "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 4,
+   "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 5,
+   "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 6,
+   "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 7,
+   "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 8,
+   "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 9,
+   "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 10,
+   "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 11,
+   "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 12,
+   "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 13,
+   "fields": {
+      "name": "Can add content type",
+      "content_type": 4,
+      "codename": "add_contenttype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 14,
+   "fields": {
+      "name": "Can change content type",
+      "content_type": 4,
+      "codename": "change_contenttype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 15,
+   "fields": {
+      "name": "Can delete content type",
+      "content_type": 4,
+      "codename": "delete_contenttype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 16,
+   "fields": {
+      "name": "Can view content type",
+      "content_type": 4,
+      "codename": "view_contenttype"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 17,
+   "fields": {
+      "name": "Can add session",
+      "content_type": 5,
+      "codename": "add_session"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 18,
+   "fields": {
+      "name": "Can change session",
+      "content_type": 5,
+      "codename": "change_session"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 19,
+   "fields": {
+      "name": "Can delete session",
+      "content_type": 5,
+      "codename": "delete_session"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 20,
+   "fields": {
+      "name": "Can view session",
+      "content_type": 5,
+      "codename": "view_session"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 21,
+   "fields": {
+      "name": "Can add pelicula",
+      "content_type": 6,
+      "codename": "add_pelicula"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 22,
+   "fields": {
+      "name": "Can change pelicula",
+      "content_type": 6,
+      "codename": "change_pelicula"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 23,
+   "fields": {
+      "name": "Can delete pelicula",
+      "content_type": 6,
+      "codename": "delete_pelicula"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 24,
+   "fields": {
+      "name": "Can view pelicula",
+      "content_type": 6,
+      "codename": "view_pelicula"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 25,
+   "fields": {
+      "name": "Can add funcion",
+      "content_type": 7,
+      "codename": "add_funcion"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 26,
+   "fields": {
+      "name": "Can change funcion",
+      "content_type": 7,
+      "codename": "change_funcion"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 27,
+   "fields": {
+      "name": "Can delete funcion",
+      "content_type": 7,
+      "codename": "delete_funcion"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 28,
+   "fields": {
+      "name": "Can view funcion",
+      "content_type": 7,
+      "codename": "view_funcion"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 29,
+   "fields": {
+      "name": "Can add user",
+      "content_type": 8,
+      "codename": "add_persona"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 30,
+   "fields": {
+      "name": "Can change user",
+      "content_type": 8,
+      "codename": "change_persona"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 31,
+   "fields": {
+      "name": "Can delete user",
+      "content_type": 8,
+      "codename": "delete_persona"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 32,
+   "fields": {
+      "name": "Can view user",
+      "content_type": 8,
+      "codename": "view_persona"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 33,
+   "fields": {
+      "name": "Can add jefe",
+      "content_type": 9,
+      "codename": "add_jefe"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 34,
+   "fields": {
+      "name": "Can change jefe",
+      "content_type": 9,
+      "codename": "change_jefe"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 35,
+   "fields": {
+      "name": "Can delete jefe",
+      "content_type": 9,
+      "codename": "delete_jefe"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 36,
+   "fields": {
+      "name": "Can view jefe",
+      "content_type": 9,
+      "codename": "view_jefe"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 37,
+   "fields": {
+      "name": "Can add empleado",
+      "content_type": 10,
+      "codename": "add_empleado"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 38,
+   "fields": {
+      "name": "Can change empleado",
+      "content_type": 10,
+      "codename": "change_empleado"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 39,
+   "fields": {
+      "name": "Can delete empleado",
+      "content_type": 10,
+      "codename": "delete_empleado"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 40,
+   "fields": {
+      "name": "Can view empleado",
+      "content_type": 10,
+      "codename": "view_empleado"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 41,
+   "fields": {
+      "name": "Can add cliente",
+      "content_type": 11,
+      "codename": "add_cliente"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 42,
+   "fields": {
+      "name": "Can change cliente",
+      "content_type": 11,
+      "codename": "change_cliente"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 43,
+   "fields": {
+      "name": "Can delete cliente",
+      "content_type": 11,
+      "codename": "delete_cliente"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 44,
+   "fields": {
+      "name": "Can view cliente",
+      "content_type": 11,
+      "codename": "view_cliente"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 45,
+   "fields": {
+      "name": "Can add teatro",
+      "content_type": 12,
+      "codename": "add_teatro"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 46,
+   "fields": {
+      "name": "Can change teatro",
+      "content_type": 12,
+      "codename": "change_teatro"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 47,
+   "fields": {
+      "name": "Can delete teatro",
+      "content_type": 12,
+      "codename": "delete_teatro"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 48,
+   "fields": {
+      "name": "Can view teatro",
+      "content_type": 12,
+      "codename": "view_teatro"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 49,
+   "fields": {
+      "name": "Can add sala",
+      "content_type": 13,
+      "codename": "add_sala"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 50,
+   "fields": {
+      "name": "Can change sala",
+      "content_type": 13,
+      "codename": "change_sala"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 51,
+   "fields": {
+      "name": "Can delete sala",
+      "content_type": 13,
+      "codename": "delete_sala"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 52,
+   "fields": {
+      "name": "Can view sala",
+      "content_type": 13,
+      "codename": "view_sala"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 53,
+   "fields": {
+      "name": "Can add silla",
+      "content_type": 14,
+      "codename": "add_silla"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 54,
+   "fields": {
+      "name": "Can change silla",
+      "content_type": 14,
+      "codename": "change_silla"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 55,
+   "fields": {
+      "name": "Can delete silla",
+      "content_type": 14,
+      "codename": "delete_silla"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 56,
+   "fields": {
+      "name": "Can view silla",
+      "content_type": 14,
+      "codename": "view_silla"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 57,
+   "fields": {
+      "name": "Can add boleta",
+      "content_type": 15,
+      "codename": "add_boleta"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 58,
+   "fields": {
+      "name": "Can change boleta",
+      "content_type": 15,
+      "codename": "change_boleta"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 59,
+   "fields": {
+      "name": "Can delete boleta",
+      "content_type": 15,
+      "codename": "delete_boleta"
+   }
+},
+{
+   "model": "auth.permission",
+   "pk": 60,
+   "fields": {
+      "name": "Can view boleta",
+      "content_type": 15,
+      "codename": "view_boleta"
+   }
+},
+{
+   "model": "persona.persona",
+   "pk": 7,
+   "fields": {
+      "password": "pbkdf2_sha256$180000$AZtj1u7SlGMo$jotdoNozwZFCUk2/aa2gu7zwc+4bCOSdDOvNpmpMEiM=",
+      "last_login": "2020-05-30T06:28:53.760Z",
+      "is_superuser": false,
+      "username": "0123",
+      "first_name": "Cleopatra Viviana",
+      "last_name": "Castro",
+      "email": "viviana.castro@univalle.edu.co",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2020-05-21T04:31:12.295Z",
+      "cedula": "01234",
+      "celular": "3148077211",
+      "nacimiento": "1996-09-11",
+      "groups": [],
+      "user_permissions": []
+   }
+},
+{
+   "model": "persona.persona",
+   "pk": 10,
+   "fields": {
+      "password": "pbkdf2_sha256$180000$JpSIc8IqBJO6$61yHiBWCZ7BlVIqtrLxWj53FA5gT1hyg0cTerfEav6A=",
+      "last_login": "2020-05-26T02:58:33.943Z",
+      "is_superuser": false,
+      "username": "1144087103",
+      "first_name": "Daniel",
+      "last_name": "Bueno",
+      "email": "danielfelipe96@hotmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2020-05-21T21:17:35.612Z",
+      "cedula": "1144087103",
+      "celular": "3176743662",
+      "nacimiento": "1996-02-26",
+      "groups": [],
+      "user_permissions": []
+   }
+},
+{
+   "model": "persona.persona",
+   "pk": 11,
+   "fields": {
+      "password": "pbkdf2_sha256$180000$vA8kjkDBFBEF$J7BE9H1aigT3g6USN6hfedqa87qooHtRStA0JzA3pzM=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "11111111",
+      "first_name": "Carlos Andr\u00e9s",
+      "last_name": "V\u00e9lez Torres",
+      "email": "danielfelipe96@hotmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2020-05-26T04:11:37.655Z",
+      "cedula": "11111111",
+      "celular": "3164455732",
+      "nacimiento": "1993-08-15",
+      "groups": [],
+      "user_permissions": []
+   }
+},
+{
+   "model": "persona.persona",
+   "pk": 12,
+   "fields": {
+      "password": "",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "",
+      "first_name": "Anthony",
+      "last_name": "Russo",
+      "email": "anthony@marvel.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2020-05-30T06:32:32.169Z",
+      "cedula": "22332313143",
+      "celular": "3214334133213",
+      "nacimiento": "1970-02-03",
+      "groups": [],
+      "user_permissions": []
+   }
+},
+{
+   "model": "persona.jefe",
+   "pk": 2,
+   "fields": {
+      "persona": 7,
+      "is_boss": true,
+      "teatro": 1
+   }
+},
+{
+   "model": "persona.empleado",
+   "pk": 1,
+   "fields": {
+      "persona": 10,
+      "is_staff": true,
+      "jefe": 2,
+      "cargo": "co"
+   }
+},
+{
+   "model": "pelicula.pelicula",
+   "pk": 1,
+   "fields": {
+      "en_cartelera": true,
+      "nombre": "Avengers: Endgame",
+      "duracion": "02:32:00",
+      "genero": "acc",
+      "pais": "US",
+      "director": 12
+   }
+},
+{
+   "model": "pelicula.pelicula",
+   "pk": 2,
+   "fields": {
+      "en_cartelera": false,
+      "nombre": "It 2",
+      "duracion": "02:13:00",
+      "genero": "ter",
+      "pais": "US",
+      "director": 11
+   }
+}
+]

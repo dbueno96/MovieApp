@@ -1,0 +1,15 @@
+{%extends 'base/base.html'%}
+
+{%block content%}
+<div class="container">
+    <form method="post">
+        {%csrf_token%}
+        <center>
+            <h1>¿Desea eliminar la función de las  {{object.hora_inicio}} del día {{object.fecha}} en la sala {{object.sala}}</h1>
+            <button class="btn btn-primary" type="submit">Sí, eliminar</button>
+            <a href="{%url 'funcion:listar_funcion'%}" class="btn btn-danger">Cancelar</a>
+        </center>
+    </form>
+</div>
+
+{%endblock%}

@@ -1,0 +1,40 @@
+a{
+    color: #FFF !important;
+}
+
+
+
+
+
+.colored{
+    background-color: rgb(52,58,64) !important;
+}
+.dropdown-menu{
+    background-color: rgb(52,58,64) !important;
+}
+.navbar-nav{
+    background-color: rgb(52,58,64) !important;
+}
+.navbar-nav .dropdown-menu  {
+    background-color: rgb(52,58,64) !important;
+}
+
+.to-right{
+    text-align: right;
+}
+
+
+
+#botona{
+    background-color: rgb(52,58,64) !important; 
+    border-color: rgb(52,58,64)!important;
+    color:#FFF!important;
+
+}
+.btn-default{
+    background-color: rgb(52,58,64) !important; 
+    border-color: rgb(52,58,64)!important;
+    color:#FFF!important;
+}
+
+

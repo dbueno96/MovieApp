@@ -1,0 +1,15 @@
+{%extends 'base/base.html'%}
+
+{%block content%}
+<div class="container">
+    <form method="post">
+        {%csrf_token%}
+        <center>
+            <h1>¿Desea eliminar la película {{object.nombre}} del director {{object.director}}</h1>
+            <button class="btn btn-primary" type="submit">Sí, eliminar</button>
+            <a href="{%url 'pelicula:listar_pelicula'%}" class="btn btn-danger">Cancelar</a>
+        </center>
+    </form>
+</div>
+
+{%endblock%}

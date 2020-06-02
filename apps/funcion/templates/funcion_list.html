@@ -1,0 +1,76 @@
+{%extends 'base/base.html'%}
+
+{%block content%}
+
+{%if object_list%}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="float-right">
+                <a href="{%url 'funcion:registrar_funcion'%}" class="btn btn-primary">Nueva función</a>
+            </div>
+        </div>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>Fecha</td>
+                <td>Hora de Inicio</td>
+                <td>Hora de Finalización</td>
+                <td>Empleado</td>
+                <td>Sala</td>
+                <td>Película</td>
+                <td>Acciones</td>
+            </tr>
+        </thead>
+        <tbody>
+            {%for func in object_list%}
+            <tr>
+                <td>{{func.id}}</td>
+                <td>{{func.fecha}}</td>
+                <td>{{func.hora_inicio}}</td>
+                <td>{{func.hora_final}}</td>
+                <td>{{func.empleado}}</td>
+                <td>{{func.sala}}</td>
+                <td>{{func.pelicula}}</td>
+                <td>
+                    <a href="{%url 'funcion:editar_funcion' func.id%}" class="btn btn-primary">Editar</a>
+                    <a href="{%url 'funcion:eliminar_funcion' func.id%}" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+    <div class="pagination">
+        <div class="container">
+            {% if page_obj.has_previous%}
+            <div class="float-left">
+                <a href="?page={{page_obj.previuos_page_number}}" class="btn bg-dark"> Anterior </a>
+            </div>
+            {%endif%}
+            
+            <div class="text-center">
+                <span class="current">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                </span>    
+            </div>
+        
+        {% if page_obj.has_next%}
+        
+        <div class="float-right">
+            <a href="?page={{page_obj.next_page_number}}" class="btn bg-dark">Siguiente</a>
+        </div>
+        {%endif%}
+        </div>
+    </div>
+</div>
+{%else%}
+<center>
+    <h1>No hay funciones aún</h1>
+    <a href="{%url 'funcion:registrar_funcion'%}" class="btn btn-primary">Registrar función</a>
+
+</center>
+{%endif%}
+
+{%endblock%}

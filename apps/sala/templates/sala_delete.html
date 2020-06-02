@@ -1,0 +1,16 @@
+{%extends 'base/base.html'%}
+
+{%block content%}
+<div class="container">
+    <form method="post">
+    {%csrf_token%}
+        <center>
+            <h1>¿Desea eliminar la sala {{object.numero}} en del teatro {{object.teatro}}</h1>
+            <button class="btn btn-primary" type="submit">Sí, eliminar</button>
+            <a href="{%url 'sala:listar_sala'%}" class="btn btn-danger">Cancelar</a>
+        </center>
+
+    </form>
+</div>
+
+{%endblock%}

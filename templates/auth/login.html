@@ -1,0 +1,53 @@
+{%extends 'base/base.html'%}
+
+{%block extra_js%}
+<script>
+
+$(document).ready(function(){
+    $('input').addClass('form-control');
+});
+</script>
+
+
+
+{%endblock%}
+
+{%block content%}
+<div class="container">
+    {%if not user.is_authenticated%}
+
+
+    <form method="post">
+        {%csrf_token%}
+        <div class="row">
+            <div class="col-lg-5 offset-lg-3">
+                <div class="form-group"><label for="username" name="username">Nombre de Usuario</label>
+                {{form.username}}
+                </div> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 offset-lg-3">
+                <div class="form-group"><label for="password">Contraseña</label>
+                {{form.password}}
+                </div> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 offset-lg-4">
+                <div class="form-group"><label for=""></label>
+                <a href="{%url 'password_reset'%}" class="btn btn-default">Olvidé mi contraseña</a>
+                <button class="btn btn-primary" type="submit">Ingresar</button>
+                </div>
+            </div>
+        </div>
+    
+    </form>
+    {%else%}
+    
+    
+    {%endif%}
+    
+</div>
+{%endblock%}
+

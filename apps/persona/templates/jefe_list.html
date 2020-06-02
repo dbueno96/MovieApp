@@ -1,0 +1,58 @@
+{%extends 'base/base.html'%}
+
+{%block content%}
+
+{% if object_list%}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="float-right">
+                <a href="{%url 'persona:registrar_jefe'%}" class="btn btn-primary">Nuevo jefe</a>
+            </div>
+        </div>
+    </div>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>Cédula</td>
+                <td>Nombres</td>
+                <td>Apellidos</td>
+                <td>Fecha de Nacimiento</td>
+                <td>Email</td>
+                <td>¿Es Jefe?</td>
+                <td>Teatro</td>
+                <td>Acciones</td>
+            </tr>
+        </thead>
+        <tbody>
+            {%for p in object_list%}
+            <tr>
+                <td>{{p.persona}}</td>
+                <td>{{p.persona.cedula}}</td>
+                <td>{{p.persona.first_name}}</td>
+                <td>{{p.persona.last_name   }}</td>
+                <td>{{p.persona.nacimiento}}</td>
+                <td>{{p.persona.email}}</td>
+                <td>{{p.is_boss}}</td>
+                <td>{{p.teatro}}</td>
+                <td>
+                    <a class="btn btn-primary"href="{%url 'persona:editar_jefe' p.id%}">Editar</a>
+                    <a class="btn btn-danger"href="{%url 'persona:eliminar_jefe' p.id%}">Eliminar</a>
+                    
+                </td>
+            </tr>
+            {%endfor%}
+        </tbody>
+
+    </table>
+</div>
+{%else%}
+<center>
+    <h5>No hay jefes aún</h5>
+    <a href="{%url 'persona:registrar_jefe'%}" class="btn btn-primary">Registrar uno</a>
+</center>
+{%endif%}
+
+{%endblock%}

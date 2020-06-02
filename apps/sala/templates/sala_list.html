@@ -1,0 +1,66 @@
+{%extends 'base/base.html'%}
+{% load static %}
+{%block extra_css%}
+<link rel="stylesheet" href="{%static 'css/staff.css'%}">
+{%endblock%}
+
+{%block content%}
+<div class="container">
+    {%if object_list%}
+        <div class="row distanced">
+            <div class="col-lg-12">
+                <div class="float-right">
+                    <a href="{%url 'sala:registrar_sala'%}" class="btn btn-default">Nueva sala</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            
+        </div>
+        <div class="table-div">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td>#</td>
+                        <td>Numero de Sala</td>
+                        <td>Capacidad en clase general</td>
+                        <td>Capacidad en primera clase</td>
+                        <td>Capacidad para discapacitados</td>
+                        <td>Formato</td>
+                        <td>Teatro</td>
+                        <td>Acciones</td>
+                    </tr>
+                </thead>
+                <tbody>
+                {%for s in object_list%}
+                    <tr>
+                        <td>{{s.id}}</td>
+                        <td>{{s.numero}}</td>
+                        <td>{{s.cap_general}}</td>
+                        <td>{{s.cap_primera_clase}}</td>
+                        <td>{{s.cap_discapacitados}}</td>
+                        <td>{{s.tipo_formato}}</td>
+                        <td>{{s.teatro}}</td>
+                        <td>
+                            <a href="{%url 'sala:editar_sala' s.id%}" class="btn btn-default">Editar</a>
+                            <a href="{%url 'sala:eliminar_sala' s.id%}" class="btn btn-delete">Eliminar</a>
+                        </td>
+                    </tr>
+                {%endfor%}
+                    
+                </tbody>
+            </table>
+        </div>
+        
+        {%else%}
+        <center>
+            <h5>No hay salas aún</h5>
+            <a href="{%url 'sala:registrar_sala'%}" class="btn btn-default">Registrar sala</a>
+        </center>
+    {%endif%}
+    </table>
+</div>    
+
+{%endblock%}
+
+
