@@ -15,6 +15,7 @@ class FuncionForm(forms.ModelForm):
             'fecha',
             'hora_inicio',
             'empleado',
+            'teatro',
             'sala',
             'pelicula'
         ]
@@ -23,6 +24,8 @@ class FuncionForm(forms.ModelForm):
             'fecha': 'Fecha', 
             'hora_inicio': 'Hora de Inicio', 
             'empleado': 'Empleado en Sillas', 
+            'teatro': 'Teatro',
+            'sala': 'Sala',
             'pelicula': 'Película'
         }
 
@@ -36,10 +39,12 @@ class FuncionForm(forms.ModelForm):
                                             },empty_label=("Choose Year", "Choose Month", "Choose Day"),),
             'hora_inicio': HourInput(attrs={'class':'form-control'}),
             'empleado': forms.Select(attrs={'class': 'form-control'}),
+            'teatro': forms.Select(attrs={'class':'form-control'}),
+            'sala': forms.Select(attrs={'class':'form-control'}),
             'pelicula': forms.Select(attrs={'class': 'form-control'}),
         }
 
-
+    
     
     def clean(self): 
         cleaned_data = self.cleaned_data

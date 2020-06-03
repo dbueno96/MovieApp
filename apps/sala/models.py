@@ -23,7 +23,7 @@ class Sala(models.Model):
     teatro= models.ForeignKey(Teatro, null=True, blank=False, on_delete=models.CASCADE)
 
     def __str__(self):
-        return 'Sala {} - {}'.format(self.numero, self.teatro)
+        return 'Sala {}'.format(self.numero)
 
     class Meta: 
         unique_together=(('numero', 'teatro'))

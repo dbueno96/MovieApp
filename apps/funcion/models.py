@@ -3,6 +3,7 @@ from django.db import models
 from apps.pelicula.models import Pelicula
 from apps.sala.models import Sala
 from apps.persona.models import Empleado
+from apps.teatro.models import Teatro
 from apps.funcion.validators import *
 # Create your models here.
 
@@ -11,6 +12,7 @@ class Funcion(models.Model):
     hora_inicio = models.TimeField(default=time(0,0,0))
     hora_final = models.TimeField(null=True)
     empleado =models.ForeignKey(Empleado, null=True, blank=False, on_delete=models.CASCADE)
+    teatro= models.ForeignKey(Teatro, blank= True,null=True, on_delete=models.CASCADE)
     sala= models.ForeignKey(Sala, null=True, blank=False, on_delete=models.CASCADE)
     pelicula = models.ForeignKey(Pelicula, null=True, blank=False, on_delete= models.CASCADE)
 

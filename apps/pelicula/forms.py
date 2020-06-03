@@ -55,6 +55,6 @@ class PeliculaForm(forms.ModelForm):
             'sinopsis': forms.TextInput(attrs={'class':'form-control'}),
             'en_cartelera': forms.CheckboxInput(attrs={'class':'form-control'}),
             'es_estreno': forms.CheckboxInput(attrs={'class':'form-control'}),
-            'imagen': ImageUpload(attrs={'class':'form-control'}) ,
+            'imagen': ImageUpload(attrs={'class':'form-control'}), 
             'trailer': forms.TextInput(attrs={'class':'form-control'})
         }

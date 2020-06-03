@@ -14,7 +14,7 @@ class SalaCreate(LoginRequiredMixin, CreateView):
     model= Sala
     login_url=reverse_lazy('login')
     form_class= SalaForm
-    template_name= 'sala/sala_form.html'
+    template_name= 'sala_form.html'
     success_url= reverse_lazy('sala:listar_sala')
 
 
@@ -85,7 +85,7 @@ class SalaUpdate(LoginRequiredMixin, UpdateView):
     model=Sala
     login_url=reverse_lazy('login')
     form_class=SalaForm
-    template_name='sala/sala_form.html'
+    template_name='sala_form.html'
     success_url= reverse_lazy('sala:listar_sala')
     
     def post(self, request, **kwargs): 
@@ -97,7 +97,7 @@ class SalaUpdate(LoginRequiredMixin, UpdateView):
 class SalaList(LoginRequiredMixin, ListView):
     model=Sala
     login_url=reverse_lazy('login')
-    template_name='sala/sala_list.html'
+    template_name='sala_list.html'
 
     
 
@@ -112,5 +112,5 @@ class SalaList(LoginRequiredMixin, ListView):
 class SalaDelete(LoginRequiredMixin, DeleteView):
     model=Sala
     login_url=reverse_lazy('login')
-    template_name='sala/sala_delete.html'
+    template_name='sala_delete.html'
     success_url=reverse_lazy('sala:listar_sala')

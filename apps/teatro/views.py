@@ -10,7 +10,7 @@ class TeatroCreate(LoginRequiredMixin,CreateView):
     model=Teatro
     login_url=reverse_lazy('login')
     form_class= TeatroForm
-    template_name='teatro/teatro_form.html'
+    template_name='teatro_form.html'
     success_url=reverse_lazy('teatro:listar_teatro')
 
 
@@ -18,18 +18,18 @@ class TeatroUpdate(LoginRequiredMixin,UpdateView):
     model = Teatro
     login_url=reverse_lazy('login')
     form_class= TeatroForm
-    template_name= 'teatro/teatro_form.html'
+    template_name= 'teatro_form.html'
     success_url= reverse_lazy('teatro:listar_teatro')
 
 class TeatroList(LoginRequiredMixin,ListView):
     model =Teatro
     login_url=reverse_lazy('login')
-    template_name='teatro/teatro_list.html'
+    template_name='teatro_list.html'
 
 
 class TeatroDelete(LoginRequiredMixin,DeleteView): 
     model= Teatro
     login_url=reverse_lazy('login')
-    template_name='teatro/teatro_delete.html'
+    template_name='teatro_delete.html'
     success_url=reverse_lazy('teatro:listar_teatro')
     

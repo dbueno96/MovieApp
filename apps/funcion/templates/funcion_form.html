@@ -1,5 +1,31 @@
 {%extends 'base/base.html'%}
 
+{%block extra_js%}
+<script>
+    $("#id_teatro").change(function () {
+        var teatro= $(this).val();
+        
+        $.ajax({
+            url: "{%url 'funcion:salas_ajax'%}",
+            data: {
+                'teatro':teatro
+            },
+            dataType: 'json',
+            success: function(salas){
+                console.log(salas);
+                var id_sala=$('#id_sala');
+                id_sala.children().remove();
+                for(sala in salas){
+                    id_sala.append('<option> Sala '+ salas[sala].numero+  '</option>');
+                }
+            }
+
+        });
+    });
+
+</script>
+{%endblock%}
+
 {%block content%}
 <div class="container">
     <form method="post">
