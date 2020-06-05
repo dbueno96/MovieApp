@@ -2,6 +2,10 @@
 
 {%block extra_js%}
 <script>
+    $(document).ready(function(){
+        $('#id_sala').children().remove();
+        $('#id_sala').append('<option disabled selected value> --Escoge un teatro primero--</option>');
+    });
     $("#id_teatro").change(function () {
         var teatro= $(this).val();
         
@@ -16,7 +20,7 @@
                 var id_sala=$('#id_sala');
                 id_sala.children().remove();
                 for(sala in salas){
-                    id_sala.append('<option> Sala '+ salas[sala].numero+  '</option>');
+                    id_sala.append('<option>'+ salas[sala].id+  '</option>');
                 }
             }
 

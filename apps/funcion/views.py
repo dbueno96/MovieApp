@@ -5,10 +5,12 @@ from django.urls import reverse_lazy
 from django.views.generic import CreateView, UpdateView, ListView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from apps.funcion.models import Funcion
+from apps.persona.models import Empleado, Jefe
 from apps.sala.models import Sala
 from apps.funcion.forms import FuncionForm
 
 # Create your views here.
+
 
 class FuncionCreate(LoginRequiredMixin,CreateView):
     model=Funcion
@@ -32,6 +34,21 @@ class FuncionList(LoginRequiredMixin,ListView):
     paginate_by=6
     login_url=reverse_lazy('login')
 
+
+    def get_queryset(self): 
+        user= self.request.user
+        
+        if user.is_superuser: 
+            return Funcion.objects.all()
+        
+        user= Jefe.objects.get(persona=user.id)
+        print('User= {}'.format(user))
+
+        if user.is_boss: 
+            return Funcion.objects.filter(teatro=user.teatro)
+        
+        else:
+            return None
 
 class FuncionDelete(LoginRequiredMixin,DeleteView):
     model= Funcion

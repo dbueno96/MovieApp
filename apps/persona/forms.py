@@ -1,7 +1,40 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.utils.translation import gettext as _
-from apps.persona.models import Empleado, Persona,Jefe
+from apps.persona.models import Empleado, Persona,Jefe,User
+
+
+class UserForm(forms.ModelForm):
+    class Meta: 
+        model= User 
+        fields=[
+            'first_name',
+            'last_name',
+            'email'
+        ]
+
+        labels={
+            'first_name': 'Nombres',
+            'last_name':'Apellidos',
+            'email': 'E-mail',
+        }
+
+        widgets={
+            'first_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'last_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'email': forms.EmailInput(attrs={'class':'form-control'}),
+
+        }
+    def clean(self): 
+        cleaned = super().clean() 
+        if 'username' not in cleaned: 
+            cleaned['username']= cleaned['cedula']
+        if 'password1' not in cleaned: 
+            cleaned['password1']= cleaned['cedula']
+        if 'password2' not in cleaned: 
+            cleaned['password2']= cleaned['cedula']
+
+        print(cleaned)
 
 class EmpleadoForm(forms.ModelForm):
     class Meta:
@@ -48,25 +81,17 @@ class PersonaForm(forms.ModelForm):
         model=Persona
         fields= [
             'cedula',
-            'first_name',
-            'last_name',
             'nacimiento',
             'celular',
-            'email',
         ]
         labels= {
             'cedula' : 'Identificación',
-            'first_name': 'Nombres',
-            'last_name':'Apellidos',
             'nacimiento': 'Fecha de Nacimiento',
             'celular': 'Celular', 
-            'email': 'E-mail',
         }
 
         widgets={
             'cedula' : forms.TextInput(attrs={'class': 'form-control'}),
-            'first_name': forms.TextInput(attrs={'class': 'form-control'}),
-            'last_name': forms.TextInput(attrs={'class': 'form-control'}),
             'nacimiento': forms.SelectDateWidget(attrs={'class': 'form-control'},
                                                 years= range(1950, 2021),
                                                 months= {
@@ -76,16 +101,6 @@ class PersonaForm(forms.ModelForm):
                                                 },
                                                 empty_label=("Choose Year", "Choose Month", "Choose Day"),),
             'celular':forms.TextInput(attrs={'class':'form-control'}),
-            'email': forms.EmailInput(attrs={'class':'form-control'}),
         }
 
-    def clean(self): 
-        cleaned = super().clean() 
-        if 'username' not in cleaned: 
-            cleaned['username']= cleaned['cedula']
-        if 'password1' not in cleaned: 
-            cleaned['password1']= cleaned['cedula']
-        if 'password2' not in cleaned: 
-            cleaned['password2']= cleaned['cedula']
-
-        print(cleaned)
+  

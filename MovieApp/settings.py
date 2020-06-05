@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'apps.boleta',
 ]
 
-AUTH_USER_MODEL = 'persona.Persona'
+AUTH_USER_MODEL = 'persona.User'
 
 
 MIDDLEWARE = [
